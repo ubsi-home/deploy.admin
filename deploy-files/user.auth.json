@@ -1,0 +1,30 @@
+{
+  "maven_url": "${local-maven-repo}",
+  "maven_repo": [ {
+    "url" : "https://maven.pkg.github.com/ubsi-home/release/",
+    "user": "${github-account}",
+    "password": "${github-pat}"
+  } ],
+  "service_name": "rewin.user.auth",
+  "service_class": "rewin.service.user.auth.Service",
+  "jar_group": "rewin.service.user",
+  "jar_artifact": "rewin.service.user.auth",
+  "jar_version": "1.0.1",
+  "resource_path": "",
+  "config": null,
+"dependencies": [
+  {
+    "jarFile": "rewin.service.user.auth-1.0.1.jar",
+    "groupId": "rewin.service.user",
+    "artifactId": "rewin.service.user.auth",
+    "version": "1.0.1"
+  },
+  {
+    "jarFile": "rewin.ubsi.core-2.3.0.jar",
+    "groupId": "rewin.ubsi",
+    "artifactId": "rewin.ubsi.core",
+    "version": "2.3.0"
+  }
+]
+}
+

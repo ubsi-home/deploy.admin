@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Apr 25 13:23:51 CST 2022
+netty-resolver-dns-native-macos-4.1.72.Final.pom>mirror=
+netty-resolver-dns-native-macos-4.1.72.Final-osx-x86_64.jar>mirror=
+netty-resolver-dns-native-macos-4.1.72.Final-osx-aarch_64.jar>mirror=

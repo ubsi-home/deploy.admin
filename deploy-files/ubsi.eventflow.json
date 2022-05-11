@@ -1,0 +1,35 @@
+{
+  "maven_url": "${local-maven-repo}",
+  "maven_repo": [ {
+    "url" : "https://maven.pkg.github.com/ubsi-home/release/",
+    "user": "${github-account}",
+    "password": "${github-pat}"
+  } ],
+  "service_name": "rewin.ubsi.eventflow",
+  "service_class": "rewin.service.ubsi.eventflow.Service",
+  "jar_group": "rewin.service.ubsi",
+  "jar_artifact": "rewin.service.ubsi.eventflow",
+  "jar_version": "1.0.0",
+  "resource_path": "",
+  "config": {
+    "mongo_servers": [ {
+      "host": "${mongo-ip}",
+      "port": ${mongo-port}
+    } ]
+  },
+"dependencies": [
+  {
+    "jarFile": "rewin.service.ubsi.eventflow-1.0.0.jar",
+    "groupId": "rewin.service.ubsi",
+    "artifactId": "rewin.service.ubsi.eventflow",
+    "version": "1.0.0"
+  },
+  {
+    "jarFile": "rewin.ubsi.core-2.3.0.jar",
+    "groupId": "rewin.ubsi",
+    "artifactId": "rewin.ubsi.core",
+    "version": "2.3.0"
+  }
+]
+}
+

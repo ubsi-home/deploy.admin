@@ -1,0 +1,66 @@
+{
+  "maven_url": "${local-maven-repo}",
+  "maven_repo": [ {
+    "url" : "https://maven.pkg.github.com/ubsi-home/release/",
+    "user": "${github-account}",
+    "password": "${github-pat}"
+  } ],
+  "service_name": "rewin.ubsi.admin",
+  "service_class": "rewin.service.ubsi.admin.Service",
+  "jar_group": "rewin.service.ubsi",
+  "jar_artifact": "rewin.service.ubsi.admin",
+  "jar_version": "1.0.0",
+  "resource_path": "",
+  "config": null,
+"dependencies": [
+  {
+    "jarFile": "rewin.service.ubsi.admin-1.0.0.jar",
+    "groupId": "rewin.service.ubsi",
+    "artifactId": "rewin.service.ubsi.admin",
+    "version": "1.0.0"
+  },
+  {
+    "jarFile": "rewin.ubsi.core-2.3.0.jar",
+    "groupId": "rewin.ubsi",
+    "artifactId": "rewin.ubsi.core",
+    "version": "2.3.0"
+  },
+  {
+    "jarFile": "jjwt-0.9.1.jar",
+    "groupId": "io.jsonwebtoken",
+    "artifactId": "jjwt",
+    "version": "0.9.1"
+  },
+  {
+    "jarFile": "jackson-databind-2.9.6.jar",
+    "groupId": "com.fasterxml.jackson.core",
+    "artifactId": "jackson-databind",
+    "version": "2.9.6"
+  },
+  {
+    "jarFile": "jackson-annotations-2.9.0.jar",
+    "groupId": "com.fasterxml.jackson.core",
+    "artifactId": "jackson-annotations",
+    "version": "2.9.0"
+  },
+  {
+    "jarFile": "jackson-core-2.9.6.jar",
+    "groupId": "com.fasterxml.jackson.core",
+    "artifactId": "jackson-core",
+    "version": "2.9.6"
+  },
+  {
+    "jarFile": "java-jwt-3.4.0.jar",
+    "groupId": "com.auth0",
+    "artifactId": "java-jwt",
+    "version": "3.4.0"
+  },
+  {
+    "jarFile": "commons-codec-1.11.jar",
+    "groupId": "commons-codec",
+    "artifactId": "commons-codec",
+    "version": "1.11"
+  }
+]
+}
+

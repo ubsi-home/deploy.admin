@@ -1,0 +1,59 @@
+{
+  "maven_url": "${local-maven-repo}",
+  "maven_repo": [ {
+    "url" : "https://maven.pkg.github.com/ubsi-home/release/",
+    "user": "${github-account}",
+    "password": "${github-pat}"
+  } ],
+  "service_name": "rewin.ubsi.scheduler",
+  "service_class": "rewin.service.ubsi.schedule.Service",
+  "jar_group": "rewin.service.ubsi",
+  "jar_artifact": "rewin.service.ubsi.schedule",
+  "jar_version": "1.0.0",
+  "resource_path": "",
+  "config": {
+    "mongo_servers": [ {
+      "host": "${mongo-ip}",
+      "port": ${mongo-port}
+    } ]
+  },
+"dependencies": [
+  {
+    "jarFile": "rewin.service.ubsi.schedule-1.0.0.jar",
+    "groupId": "rewin.service.ubsi",
+    "artifactId": "rewin.service.ubsi.schedule",
+    "version": "1.0.0"
+  },
+  {
+    "jarFile": "rewin.ubsi.core-2.3.0.jar",
+    "groupId": "rewin.ubsi",
+    "artifactId": "rewin.ubsi.core",
+    "version": "2.3.0"
+  },
+  {
+    "jarFile": "quartz-2.3.2.jar",
+    "groupId": "org.quartz-scheduler",
+    "artifactId": "quartz",
+    "version": "2.3.2"
+  },
+  {
+    "jarFile": "c3p0-0.9.5.4.jar",
+    "groupId": "com.mchange",
+    "artifactId": "c3p0",
+    "version": "0.9.5.4"
+  },
+  {
+    "jarFile": "mchange-commons-java-0.2.15.jar",
+    "groupId": "com.mchange",
+    "artifactId": "mchange-commons-java",
+    "version": "0.2.15"
+  },
+  {
+    "jarFile": "HikariCP-java7-2.4.13.jar",
+    "groupId": "com.zaxxer",
+    "artifactId": "HikariCP-java7",
+    "version": "2.4.13"
+  }
+]
+}
+
