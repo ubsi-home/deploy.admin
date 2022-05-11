@@ -107,26 +107,17 @@ cd ..
 echo
 input Local-Maven-Repository-Url ""
 local_maven=$in_value
-input Github-Account "ubsi-user"
+input Github-Account ""
 github_user=$in_value
-input Github-Personal-Access-Token `printf "%sp%s7nYPnr%sNA4Iqt%sXFNQ0%s" gh _xB VRkzbFxn WD3U Y8xEA`
+input Github-Personal-Access-Token ""
 github_token=$in_value
 
-if [ -z $local_maven ]; then
-    printf "local-maven-repo=\n\
-    github-account=%s\n\
-    github-pat=%s\n\
-    \n\
-    mongo-ip=%s\n\
-    mongo-port=%d\n" $github_user $github_token $mongo_ip $mongo_port > deploy.properties
-else
-    printf "local-maven-repo=%s\n\
-    github-account=%s\n\
-    github-pat=%s\n\
-    \n\
-    mongo-ip=%s\n\
-    mongo-port=%d\n" $local_maven $github_user $github_token $mongo_ip $mongo_port > deploy.properties
-fi
+printf "local-maven-repo=%s\n\
+github-account=%s\n\
+github-pat=%s\n\
+\n\
+mongo-ip=%s\n\
+mongo-port=%d\n" "$local_maven" "$github_user" "$github_token" $mongo_ip $mongo_port > deploy.properties
 
 for file in `ls deploy-files`
 do

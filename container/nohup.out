@@ -1,11 +1,20 @@
-[INFO]	2022-05-11 13:10:40.697	192.168.1.13#7112	rewin.ubsi.container	rewin.ubsi.container	[1]rewin.ubsi.container.Bootstrap#start()#154	startup	"2.3.0"
+[INFO]	2022-05-11 13:23:13.156	192.168.1.13#7112	rewin.ubsi.container	rewin.ubsi.container	[1]rewin.ubsi.container.Bootstrap#start()#154	startup	"2.3.0"
 ===聚合微服务定时任务====
 ===聚合微服务定时任务开始====
 ===聚合微服务定时任务开始====
-[INFO]	2022-05-11 13:12:56.314	192.168.1.13#7112	rewin.ubsi.service	rewin.ubsi.script	[32]jdk.nashorn.internal.scripts.Script$3$\^eval\_#:program()#14	script.token	...
+[INFO]	2022-05-11 13:26:05.403	192.168.1.13#7112	rewin.ubsi.service	rewin.ubsi.script	[34]jdk.nashorn.internal.scripts.Script$\^eval\_#:program()#14	script.token	...
 {
   "0": "system",
   "1": "627b45d777864e1e5ffc2359"
 }
+===聚合微服务定时任务开始====
+===聚合微服务定时任务开始====
+===聚合微服务定时任务开始====
+===聚合微服务定时任务开始====
+===聚合微服务定时任务开始====
+===聚合微服务定时任务开始====
+===聚合微服务定时任务开始====
+===聚合微服务定时任务开始====
+===聚合微服务定时任务开始====
 ===聚合微服务定时任务开始====
 ===聚合微服务定时任务开始====
