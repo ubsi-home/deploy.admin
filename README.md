@@ -24,3 +24,8 @@ UBSI-Admin治理工具的安装包
   ```
 
 
+访问UBSI-Admin:
+
+  `http://localhost:8090`
+
+

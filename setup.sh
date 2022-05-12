@@ -76,7 +76,7 @@ rm -rf rewin.ubsi.module.json
 cd ..
 
 echo
-pause "ubsi container will be start"
+pause "ubsi container will be start on $ctn_ip:$ctn_port"
 ps -ef | grep "java -jar rewin.ubsi.core" | grep -v grep
 
 ##################################################################
@@ -151,13 +151,13 @@ rm -rf nohup.out
 cd ..
 
 echo
-pause "ubsi web-script-api will be start"
+pause "ubsi web-script-api will be start on $ctn_ip:8080"
 ps -ef | grep "java -jar rewin.rest.ubsi.script" | grep -v grep
 
 ##################################################################
 
 echo
-pause "build and run docker image \"ubsi-admin\" with nginx"
+pause "build and run docker image \"ubsi-admin\" with nginx on $ctn_ip:8090"
 cd docker
 ./build.sh $ctn_ip
 cd ..
