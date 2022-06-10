@@ -77,7 +77,7 @@ cd ..
 
 echo
 pause "ubsi container will be start on $ctn_ip:$ctn_port"
-ps -ef | grep "java -jar rewin.ubsi.core" | grep -v grep
+ps -ef | grep "java -Djava.net.preferIPv4Stack=true -jar rewin.ubsi.core" | grep -v grep
 
 ##################################################################
 
@@ -152,7 +152,7 @@ cd ..
 
 echo
 pause "ubsi web-script-api will be start on $ctn_ip:8080"
-ps -ef | grep "java -jar rewin.rest.ubsi.script" | grep -v grep
+ps -ef | grep "java -Djava.net.preferIPv4Stack=true -jar rewin.rest.ubsi.script" | grep -v grep
 
 ##################################################################
 

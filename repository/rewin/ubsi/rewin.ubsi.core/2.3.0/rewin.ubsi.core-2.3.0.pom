@@ -6,56 +6,61 @@
 
     <groupId>rewin.ubsi</groupId>
     <artifactId>rewin.ubsi.core</artifactId>
-    <version>2.3.0</version>
-
-    <name>rewin.ubsi.core</name>
-    <description>UBSI核心开发包</description>
+    <version>2.3.0</version>    <!-- 需要同步修改 Controller.java -->
 
     <!--
-UBSI核心开发包，在UBSI微服务提供者 或 服务消费者的开发项目中使用。
-- 对于服务开发者：可以通过一系列@USXxx注解来声明自己的微服务及接口；
-- 对于服务消费者：可以通过rewin.usbi.consumer.Context提供的API来访问微服务
-
-UBSI核心包也会作为微服务部署/运行时的"容器"，并为每个微服务提供了自动注册、生命周期管理及动态配置/运行监控能力；
-- 包含了所有第三方依赖的核心包需要单独下载：
-[rewin.ubsi.core-2.3.0-jar-with-dependencies.jar](https://ubsi-home.github.io/download/rewin.ubsi.core-2.3.0-jar-with-dependencies.jar)
-- 作为"容器"的核心包需要独立运行：
-`java -jar rewin.ubsi.core-2.3.0-jar-with-dependencies.jar`
-
-版本更新说明：
-```
-1.0.0   2020/04/16
-        ~  首次发布
-2.0.0   2021/03/29
-        +  @UService增加了singleton属性，用来声明"单例"服务；
-        +  container容器增加针对单例服务的检测/启动机制
-        +  服务状态新增了 "-2:单例等待" 状态值
-2.0.1   2021/04/28
-        +  Container在接收请求时，可以从Header的request_params属性中获得请求参数，这时consumer在构造request时只需要
-	   指定"接口"名字，不能指定参数，参数通过构造一个Map<String,Object>并放到Header的request_params属性上；
-	   request_params内的各个属性必须是该"接口"注解中@USParma声明的参数名字；
-2.1.0   2021/09/14
-        +  container增加了forward_door配置项，注册可以转发的微服务
-2.1.1   2021/11/09
-        +  JS脚本增加了json()/_map()方法
-        ~  检测是否容器依赖的Jar包时忽略版本
-2.1.2   2021/12/02
-        +  container新增了对singleton服务的运行监控，极端情况下如果发现了多个运行中的singleton实例，则关闭"请求数"多的实例
-2.2.0   2021/12/30
-        +  增加了对slf4j接口的实现; rewin.ubsi.log.json增加了slf4j_level配置项，指定slf4j的日志输出级别，默认为"WARN"
-2.2.1   2022/01/10
-        +  ScriptUtil增加了带有ServiceContext参数的构造函数，以便在微服务中使用脚本时能够保持链路跟踪
-        +  rewin.ubsi.log.json增加了js_level配置项，指定JS脚本日志的输出级别，默认为"DEBUG"
-        +  container在load微服务时，会增加"rewin.ubsi.modules/{serviceName}"目录到classpath中
-        +  ServiceContext增加了getResourceAsStream()方法，可以读取classpath中的资源文件
-        ~  更新依赖的第三方Jar包到最新版本，如：netty-4.1.72.Final、jedis-3.7.1
-2.2.2   2022/01/20
-        +  container增加了访问微服务/过滤器资源文件的接口
-2.3.0   2022/02/20
-        +  增加了common.GlobalLock分布式全局锁
-        +  增加了TCC模式分布式式事务的处理机制（依赖rewin.ubsi.transaction服务）
-        +  Log日志的code字段增加了[PID]
-```
+        1.0.0   2020/04/16
+            ~   首次发布
+        1.0.1   2020/08/06
+            +   service stop时，清除相关的Dealing记录（防止有接口超时后，无法继续访问）
+            +   @UService/@USFilter增加了两个属性：
+                    container   指定依赖的容器的版本号
+                    syslib      指定需要加载到SystemClassLoader中的Jar包，例如"jaxen-1.2.0.jar"(dom4j需要使用)
+        1.0.2   2021/01/08
+            +   consumer.Router#getServer() 在"no routing path"时增加了日志输出
+            +   cli.Request 增加了pattern类型转换为xml/json时flag的说明
+        1.1.0   2021/03/04
+            +   Container增加了timeout_fuse参数，可以指定在当前接口超时的数量达到多少个后进行熔断处理
+            +   cli.Console工具中增加了register clear命令，清除redis中的container/restful注册数据
+            +   JS脚本增加了async()方法
+        2.0.0   2021/03/29
+            +   @UService增加了singleton属性，用来声明"单例"服务；
+            +   container容器增加针对单例服务的检测/启动机制
+            +   服务状态新增了 "-2:单例等待" 状态值
+            +   container.Controller的setStatus()接口可以直接stop服务，无需先经过pause
+        2.0.1   2021/04/28
+            +   Container在接收请求时，可以从Header的request_params属性中获得请求参数，这时consumer在构造request时只需要
+                指定"接口"名字，不能指定参数，参数通过构造一个Map<String,Object>并放到Header的request_params属性上；
+                request_params内的各个属性必须是该"接口"注解中@USParma声明的参数名字；
+        2.0.2   2021/05/17
+            ~   调整了log日志的输出格式(console/file)，增强可读性
+        2.1.0   2021/09/14
+            ~   调整了consumer路由算法，由并行使用本地/动态路由表改为优先使用本地静态路由表
+            +   container增加了forward_door配置项，注册可以转发的微服务
+            +   JsonCodec增加了正常json字符串解析的方法simpleJson()
+            +   console增加了"register container-raw"命令
+        2.1.1   2021/11/09
+            +   JS脚本增加了json()/_map()方法
+            ~   更新依赖的第三方Jar包到最新版本，如：netty-4.1.70.Final
+            ~   检测是否容器依赖的Jar包时忽略版本
+            ~   修正了注册表更新的通知消息的响应算法，以保证获取最新的注册表数据
+        2.1.2   2021/12/02
+            +   container新增了对singleton服务的运行监控，极端情况下如果发现了多个运行中的singleton实例，则关闭"请求数"多的实例
+        2.2.0   2021/12/30
+            +   增加了对slf4j接口的实现; rewin.ubsi.log.json增加了slf4j_level配置项，指定slf4j的日志输出级别，默认为"WARN"
+        2.2.1   2022/01/10
+            +   ScriptUtil增加了带有ServiceContext参数的构造函数，以便在微服务中使用脚本时能够保持链路跟踪
+            +   rewin.ubsi.log.json增加了js_level配置项，指定JS脚本日志的输出级别，默认为"DEBUG"
+            +   container在load微服务时，会增加"rewin.ubsi.modules/{serviceName}"目录到classpath中
+            +   ServiceContext增加了getResourceAsStream()方法，可以读取classpath中的资源文件
+            ~   更新依赖的第三方Jar包到最新版本，如：netty-4.1.72.Final、jedis-3.7.1
+        2.2.2   2022/01/20
+            +   container增加了访问微服务/过滤器资源文件的接口
+        2.3.0   2022/02/20
+            +   增加了common.GlobalLock分布式全局锁
+            +   增加了TCC模式分布式式事务的处理机制（依赖rewin.ubsi.transaction服务）
+            +   Log日志的code字段增加了[PID]
+            +   容器控制器的info接口返回更多信息
     -->
 
     <properties>
@@ -84,6 +89,43 @@ UBSI核心包也会作为微服务部署/运行时的"容器"，并为每个微�
                     <skipTests>true</skipTests>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>rewin.ubsi.container.Bootstrap</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>rewin.ubsi.container.Bootstrap</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -106,7 +148,7 @@ UBSI核心包也会作为微服务部署/运行时的"容器"，并为每个微�
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
-            <version>3.7.1</version>
+            <version>3.7.1</version>    <!-- 为了配合SpringBoot 2.6.2, 不能使用更高的版本 -->
         </dependency>
         <dependency>
             <groupId>org.mongodb</groupId>
@@ -128,10 +170,15 @@ UBSI核心包也会作为微服务部署/运行时的"容器"，并为每个微�
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>github packages</name>
-            <url>https://maven.pkg.github.com/ubsi-home/release</url>
+            <id>nexus-release</id>
+            <name>release</name>
+            <url>http://192.168.1.116:8081/repository/maven-releases</url>
         </repository>
+        <snapshotRepository>
+            <id>nexus-snapshot</id>
+            <name>snapshot</name>
+            <url>http://192.168.1.116:8081/repository/maven-snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
 
 </project>
