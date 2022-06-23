@@ -1,8 +1,0 @@
-{
-  "sn": "T22052700002",
-  "name": "rewin",
-  "domain": "ubsi",
-  "redis": "192.168.1.116",
-  "mongo": "192.168.1.116",
-  "sign": "4a12692820813d906dd7f94c49d2da57e64e6af251475de638227b76faa8050cf4313be29d726a80cbf90ab778b2ff9f47bd86253531e407eb7ac6523fa11b0e8eba06335ca4a9f1fe4aace9ef8e1ab868ee4dd4bec007e0e7a9177b185d4254a4fd9fddfb012191cf44cee5fb2a30774c5af79c6ac87dfbd26f017aacf66698"
-}
