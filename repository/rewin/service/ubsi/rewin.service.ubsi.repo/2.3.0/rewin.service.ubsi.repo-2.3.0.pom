@@ -11,6 +11,20 @@
     <name>rewin.service.ubsi.repo</name>
     <description>微服务：UBSI服务部署</description>
 
+    <!--
+微服务：UBSI服务部署
+```
+服务类：rewin.service.ubsi.repo.Service
+服务名字：rewin.ubsi.repo
+数据库配置：MongoDB
+```
+为UBSI治理工具提供"服务仓库"管理以及"服务部署"能力。
+> 注：不要在项目中依赖微服务的JAR包。
+
+包含所有第三方依赖的命令行方式的部署工具需要单独下载：
+[rewin.service.ubsi.repo-2.3.0-jar-with-dependencies.jar](https://ubsi-home.github.io/download/rewin.service.ubsi.repo-2.3.0-jar-with-dependencies.jar)
+    -->
+
     <properties>
         <java.version>1.8</java.version>
         <ubsi.version>2.3.0</ubsi.version>
