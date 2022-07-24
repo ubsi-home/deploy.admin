@@ -7,4 +7,4 @@ then
   sleep 2s
 fi
 
-nohup java -Djava.net.preferIPv4Stack=true -jar rewin.rest.ubsi.script-1.0.5.jar &
+nohup java -Djava.net.preferIPv4Stack=true -jar rewin.rest.ubsi.script-1.0.6.jar &

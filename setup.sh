@@ -167,7 +167,6 @@ cd ..
 echo
 echo "##################################################################"
 echo
-echo "UBSI-Admin started, you can access 'http://$ctn_ip:8090' now."
+echo "UBSI-Admin-1.1.0 started, you can access 'http://$ctn_ip:8090' now."
 echo "    login user/password: admin/abcde321"
 echo
-

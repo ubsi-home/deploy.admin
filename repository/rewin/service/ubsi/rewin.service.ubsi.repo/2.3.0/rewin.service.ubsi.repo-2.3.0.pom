@@ -21,7 +21,7 @@
 为UBSI治理工具提供"服务仓库"管理以及"服务部署"能力。
 > 注：不要在项目中依赖微服务的JAR包。
 
-包含所有第三方依赖的命令行方式的部署工具需要单独下载：
+命令行部署工具(包含所有第三方依赖)需要单独下载：
 [rewin.service.ubsi.repo-2.3.0-jar-with-dependencies.jar](https://ubsi-home.github.io/download/rewin.service.ubsi.repo-2.3.0-jar-with-dependencies.jar)
     -->
 

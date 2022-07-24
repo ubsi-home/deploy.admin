@@ -9,11 +9,16 @@
     <version>1.0.0</version>
 
     <name>rewin.service.ubsi.admin</name>
-    <description>微服务：UBSI治理服务</description>
+    <description>微服务：UBSI治理监控</description>
 
     <!--
-        1.0.0   2022/04/29
-            ~   首次发布
+微服务：UBSI治理监控
+```
+服务类：rewin.service.ubsi.admin.Service
+服务名字：rewin.ubsi.admin
+```
+UBSI治理工具使用的实时监控服务。
+> 注：不要在项目中依赖微服务的JAR包。
     -->
 
     <properties>
@@ -70,15 +75,10 @@
 
     <distributionManagement>
         <repository>
-            <id>nexus-release</id>
-            <name>release</name>
-            <url>http://192.168.1.116:8081/repository/maven-releases</url>
+            <id>github</id>
+            <name>github packages</name>
+            <url>https://maven.pkg.github.com/ubsi-home/release</url>
         </repository>
-        <snapshotRepository>
-            <id>nexus-snapshot</id>
-            <name>snapshot</name>
-            <url>http://192.168.1.116:8081/repository/maven-snapshots</url>
-        </snapshotRepository>
     </distributionManagement>
 
 </project>
