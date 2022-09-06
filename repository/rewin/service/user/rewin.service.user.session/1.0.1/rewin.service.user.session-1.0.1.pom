@@ -12,14 +12,8 @@
     <description>微服务：UBSI用户会话</description>
 
     <!--
-微服务：UBSI用户会话
-```
-服务类：rewin.service.user.session.Service
-服务名字：rewin.user.session
-数据库配置：MongoDB
-```
-提供登录用户的会话管理接口
-> 注：不要在项目中依赖微服务的JAR包。
+        1.0.1   2022/03/17
+            +   从rewin.user.auth服务获取配置项sessionSameUser，用来控制同一个用户是否可以同时登录
     -->
 
     <properties>
@@ -64,10 +58,15 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>github packages</name>
-            <url>https://maven.pkg.github.com/ubsi-home/release</url>
+            <id>nexus-release</id>
+            <name>release</name>
+            <url>http://192.168.1.116:8081/repository/maven-releases</url>
         </repository>
+        <snapshotRepository>
+            <id>nexus-snapshot</id>
+            <name>snapshot</name>
+            <url>http://192.168.1.116:8081/repository/maven-snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
 
 </project>

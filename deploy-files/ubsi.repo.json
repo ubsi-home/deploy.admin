@@ -9,7 +9,7 @@
   "service_class": "rewin.service.ubsi.repo.Service",
   "jar_group": "rewin.service.ubsi",
   "jar_artifact": "rewin.service.ubsi.repo",
-  "jar_version": "2.3.0",
+  "jar_version": "2.3.1",
   "resource_path": "",
   "config": {
     "maven_url": "${local-maven-repo}",
@@ -25,16 +25,16 @@
   },
 "dependencies": [
   {
-    "jarFile": "rewin.service.ubsi.repo-2.3.0.jar",
+    "jarFile": "rewin.service.ubsi.repo-2.3.1.jar",
     "groupId": "rewin.service.ubsi",
     "artifactId": "rewin.service.ubsi.repo",
-    "version": "2.3.0"
+    "version": "2.3.1"
   },
   {
-    "jarFile": "rewin.ubsi.core-2.3.0.jar",
+    "jarFile": "rewin.ubsi.core-2.3.1.jar",
     "groupId": "rewin.ubsi",
     "artifactId": "rewin.ubsi.core",
-    "version": "2.3.0"
+    "version": "2.3.1"
   },
   {
     "jarFile": "aether-api-1.1.0.jar",

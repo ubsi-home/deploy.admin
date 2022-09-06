@@ -124,7 +124,7 @@ do
     echo
     echo "### deploy "$file" -> "$ctn_ip"#"$ctn_port" ###"
     echo
-    java -jar rewin.service.ubsi.repo-2.3.0-jar-with-dependencies.jar deploy-files/$file $ctn_ip $ctn_port -local
+    java -jar rewin.service.ubsi.repo-2.3.1-jar-with-dependencies.jar deploy-files/$file $ctn_ip $ctn_port -local
 done
 rm -rf deploy.properties
 
@@ -167,6 +167,6 @@ cd ..
 echo
 echo "##################################################################"
 echo
-echo "UBSI-Admin-1.1.0 started, you can access 'http://$ctn_ip:8090' now."
+echo "UBSI-Admin-1.1.1 started, you can access 'http://$ctn_ip:8090' now."
 echo "    login user/password: admin/abcde321"
 echo

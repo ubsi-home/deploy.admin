@@ -7,5 +7,5 @@ then
   sleep 2s
 fi
 
-nohup java -Djava.net.preferIPv4Stack=true -jar rewin.ubsi.core-2.3.0-jar-with-dependencies.jar &
+nohup java -Djava.net.preferIPv4Stack=true -jar rewin.ubsi.core-2.3.1-jar-with-dependencies.jar &
 
