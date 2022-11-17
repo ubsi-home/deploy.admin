@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>rewin.service.ubsi</groupId>
+    <artifactId>rewin.service.ubsi.gateway</artifactId>
+    <version>1.0.1</version>
+
+    <name>rewin.service.ubsi.gateway</name>
+    <description>微服务：UBSI网关管理</description>
+
+    <!--
+微服务：UBSI网关管理
+```
+服务类：rewin.service.ubsi.gateway.Service
+服务名字：rewin.ubsi.gateway
+数据库配置：MongoDB
+```
+为UBSI治理工具提供网关的配置管理接口，包括：
+- 运行监控
+- 应用/主机/接口的访问授权
+- 路由规则、限流规则、转发规则的配置
+- 仿真数据、接口缓存以及访问日志管理
+> 注：不要在项目中依赖微服务的JAR包。
+
+===
+版本更新说明：
+```
+1.0.1   2022/10/21
+    ~	依赖rewin.ubsi.core-2.3.2
+    +	网关实例增加了"path"属性
+```
+    -->
+
+    <properties>
+        <java.version>1.8</java.version>
+        <ubsi.version>2.3.2</ubsi.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>utf-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>rewin.ubsi</groupId>
+            <artifactId>rewin.ubsi.core</artifactId>
+            <version>${ubsi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>github packages</name>
+            <url>https://maven.pkg.github.com/ubsi-home/release</url>
+        </repository>
+    </distributionManagement>
+
+</project>

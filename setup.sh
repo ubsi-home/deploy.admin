@@ -124,7 +124,7 @@ do
     echo
     echo "### deploy "$file" -> "$ctn_ip"#"$ctn_port" ###"
     echo
-    java -jar rewin.service.ubsi.repo-2.3.1-jar-with-dependencies.jar deploy-files/$file $ctn_ip $ctn_port -local
+    java -jar rewin.service.ubsi.repo-2.3.2-jar-with-dependencies.jar deploy-files/$file $ctn_ip $ctn_port -local
 done
 rm -rf deploy.properties
 
@@ -142,8 +142,7 @@ printf "{\n\
   \"redis_conn_max\": 16\n\
 }\n" $redis_ip $redis_port > rewin.ubsi.consumer.json
 printf "{\n\
-  \"url\": \"http://%s:8080/rest\",\n\
-  \"gateway\": false\n\
+  \"url\": \"http://%s:8080/rest\"\n\
 }\n" $ctn_ip > rewin.ubsi.rest.json
 
 rm -rf nohup.out
@@ -167,6 +166,6 @@ cd ..
 echo
 echo "##################################################################"
 echo
-echo "UBSI-Admin-1.1.1 started, you can access 'http://$ctn_ip:8090' now."
+echo "UBSI-Admin-1.2.0 started, you can access 'http://$ctn_ip:8090' now."
 echo "    login user/password: admin/abcde321"
 echo

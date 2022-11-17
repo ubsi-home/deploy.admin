@@ -9,7 +9,7 @@
   "service_class": "rewin.service.ubsi.script.Service",
   "jar_group": "rewin.service.ubsi",
   "jar_artifact": "rewin.service.ubsi.script",
-  "jar_version": "1.0.2",
+  "jar_version": "1.0.3",
   "resource_path": "",
   "config": {
     "mongo_servers": [ {
@@ -19,16 +19,16 @@
   },
 "dependencies": [
   {
-    "jarFile": "rewin.service.ubsi.script-1.0.2.jar",
+    "jarFile": "rewin.service.ubsi.script-1.0.3.jar",
     "groupId": "rewin.service.ubsi",
     "artifactId": "rewin.service.ubsi.script",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   {
-    "jarFile": "rewin.ubsi.core-2.3.1.jar",
+    "jarFile": "rewin.ubsi.core-2.3.2.jar",
     "groupId": "rewin.ubsi",
     "artifactId": "rewin.ubsi.core",
-    "version": "2.3.1"
+    "version": "2.3.2"
   }
 ]
 }

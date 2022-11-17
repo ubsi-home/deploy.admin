@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>rewin.service.ubsi</groupId>
+    <artifactId>rewin.service.ubsi.admin</artifactId>
+    <version>1.0.2</version>
+
+    <name>rewin.service.ubsi.admin</name>
+    <description>微服务：UBSI治理监控</description>
+
+    <!--
+微服务：UBSI治理监控
+```
+服务类：rewin.service.ubsi.admin.Service
+服务名字：rewin.ubsi.admin
+```
+UBSI治理工具使用的实时监控服务。
+> 注：不要在项目中依赖微服务的JAR包。
+
+版本更新说明：
+```
+1.0.1   2022/08/29
+    ~   依赖rewin.ubsi.core 2.3.1
+    ~   将接口中的Context.request改为ctx.request，以保持请求链路跟踪
+1.0.2   2022/11/14
+    ~   依赖rewin.ubsi.core 2.3.2
+    ~   修复bug
+```
+    -->
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <java.version>1.8</java.version>
+        <ubsi.version>2.3.2</ubsi.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>utf-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>rewin.ubsi</groupId>
+            <artifactId>rewin.ubsi.core</artifactId>
+            <version>${ubsi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>github packages</name>
+            <url>https://maven.pkg.github.com/ubsi-home/release</url>
+        </repository>
+    </distributionManagement>
+
+</project>

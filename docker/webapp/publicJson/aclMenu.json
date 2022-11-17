@@ -1,0 +1,1207 @@
+{
+  "menu": [
+    {
+      "key": "monitor",
+      "title": "运行监控",
+      "children": [
+        {
+          "key": "monitor.fwfx",
+          "title": "服务发现",
+          "children": [
+            {
+              "key": "monitor.fwfx.stop",
+              "title": "暂停服务"
+            },
+            {
+              "key": "monitor.fwfx.start",
+              "title": "启动服务"
+            },
+            {
+              "key": "monitor.fwfx.uninstall",
+              "title": "卸载服务"
+            },
+            {
+              "key": "monitor.fwfx.getRuntime",
+              "title": "运行信息"
+            },
+            {
+              "key": "monitor.fwfx.getDealing",
+              "title": "任务队列"
+            },
+            {
+              "key": "monitor.fwfx.getConfig",
+              "title": "参数配置"
+            },
+            {
+              "key": "monitor.fwfx.getDepend",
+              "title": "依赖关系"
+            },
+            {
+              "key": "monitor.fwfx.getEntry",
+              "title": "接口查询",
+              "children": [
+                {
+                  "key": "monitor.fwfx.getEntry.Execute",
+                  "title": "Execute"
+                }
+              ]
+            },
+            {
+              "key": "monitor.fwfx.query",
+              "title": "查询"
+            }
+          ]
+        },
+        {
+          "key": "monitor.rqlb",
+          "title": "容器发现",
+          "children": [
+            {
+              "key": "monitor.rqlb.query",
+              "title": "查询"
+            },
+            {
+              "key": "monitor.rqlb.gljpz",
+              "title": "管理及配置",
+              "children": [
+                {
+                  "key": "monitor.rqlb.gljpz.setAcl",
+                  "title": "设置ACL",
+                  "children": [
+                    {
+                      "key": "monitor.rqlb.gljpz.setAcl.query",
+                      "title": "查询"
+                    },
+                    {
+                      "key": "monitor.rqlb.gljpz.setAcl.submit",
+                      "title": "提交"
+                    }
+                  ]
+                },
+                {
+                  "key": "monitor.rqlb.gljpz.setRouter",
+                  "title": "本地路由",
+                  "children": [
+                    {
+                      "key": "monitor.rqlb.gljpz.setRouter.query",
+                      "title": "查询"
+                    },
+                    {
+                      "key": "monitor.rqlb.gljpz.setRouter.submit",
+                      "title": "提交"
+                    }
+                  ]
+                },
+                {
+                  "key": "monitor.rqlb.gljpz.setLogConfig",
+                  "title": "日志配置",
+                  "children": [
+                    {
+                      "key": "monitor.rqlb.gljpz.setLogConfig.query",
+                      "title": "查询"
+                    },
+                    {
+                      "key": "monitor.rqlb.gljpz.setLogConfig.submitlog",
+                      "title": "提交"
+                    }
+                    
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "monitor.swebApp",
+          "title": "WebAPP发现",
+          "children": [
+            {
+              "key": "monitor.swebApp.query",
+              "title": "查询"
+            },
+            {
+              "key": "monitor.swebApp.config",
+              "title": "运行信息"
+            },
+            {
+              "key": "monitor.swebApp.cspz",
+              "title": "参数配置",
+              "children": [
+                {
+                  "key": "monitor.swebApp.cspz.query",
+                  "title": "查询"
+                },
+                {
+                  "key": "monitor.swebApp.cspz.submit",
+                  "title": "提交"
+                }
+              ]
+            },
+            {
+              "key": "monitor.swebApp.setAcl",
+              "title": "设置ACL",
+              "children": [
+                {
+                  "key": "monitor.swebApp.setAcl.query",
+                  "title": "查询"
+                },
+                {
+                  "key": "monitor.swebApp.setAcl.submit",
+                  "title": "提交"
+                }
+              ]
+            },
+            {
+              "key": "monitor.swebApp.setRouter",
+              "title": "本地路由",
+              "children": [
+                {
+                  "key": "monitor.swebApp.setRouter.query",
+                  "title": "查询"
+                },
+                {
+                  "key": "monitor.swebApp.setRouter.submit",
+                  "title": "提交"
+                }
+              ]
+            },
+            {
+              "key": "monitor.swebApp.logConfig",
+              "title": "日志配置",
+              "children": [
+                {
+                  "key": "monitor.swebApp.logConfig.query",
+                  "title": "查询"
+                },
+                {
+                  "key": "monitor.swebApp.logConfig.submitLogConfig",
+                  "title": "提交"
+                }
+                
+              ]
+            },
+            {
+              "key": "monitor.swebApp.delete",
+              "title": "删除"
+            }
+          ]
+        },
+        {
+          "key": "monitor.tsggl",
+          "title": "手动发现",
+          "children": [
+            {
+              "key": "monitor.tsggl.query",
+              "title": "查询"
+            },
+            {
+              "key": "monitor.tsggl.addContainer",
+              "title": "新增容器"
+            },
+            {
+              "key": "monitor.tsggl.addWebAPP",
+              "title": "新增WebAPP"
+            },
+            {
+              "key": "monitor.tsggl.tagsUpdate",
+              "title": "标签编辑"
+            },
+            {
+              "key": "monitor.tsggl.delWebAPP",
+              "title": "删除"
+            },
+            {
+              "key": "monitor.tsggl.webApp",
+              "title": "webApp",
+              "children": [
+                {
+                "key": "monitor.tsggl.webApp.cspz",
+                "title": "参数配置"
+                },{
+                "key": "monitor.tsggl.webApp.setTags",
+                "title": "标签编辑"
+                },{
+                "key": "monitor.tsggl.webApp.setAcl",
+                "title": "设置Acl"
+                },{
+                "key": "monitor.tsggl.webApp.bdly",
+                "title": "本地路由"
+                },{
+                "key": "monitor.tsggl.webApp.rzpz",
+                "title": "日志配置"
+                },{
+                "key": "monitor.tsggl.webApp.del",
+                "title": "删除"
+                }
+            ]
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "key": "repo",
+      "title": "服务仓库",
+      "children": [
+        {
+          "key": "repo.awfwcx",
+          "title": "微服务查询",
+          "children": [
+            {
+              "key": "repo.awfwcx.addService",
+              "title": "微服务注册"
+            },
+            {
+              "key": "repo.awfwcx.delService",
+              "title": "服务注销"
+            },
+            {
+              "key": "repo.awfwcx.setTags",
+              "title": "修改标签"
+            },
+            {
+              "key": "repo.awfwcx.getServiceConfig",
+              "title": "默认配置"
+            },
+            {
+              "key": "repo.awfwcx.deploy",
+              "title": "实例部署"
+            },
+            {
+              "key": "repo.awfwcx.checkJar",
+              "title": "检查更新"
+            },
+            {
+              "key": "repo.awfwcx.listService",
+              "title": "查询"
+            },
+            {
+              "key": "repo.awfwcx.depends",
+              "title": "服务依赖"
+            },
+            {
+              "key": "repo.awfwcx.deployList",
+              "title": "部署状态"
+            },
+            {
+              "key": "repo.awfwcx.listEntry",
+              "title": "微服务名",
+              "children": [
+                {
+                  "key": "repo.awfwcx.listEntry.query",
+                  "title": "查询"
+                },
+                {
+                  "key": "repo.awfwcx.listEntry.execute",
+                  "title": "execute"
+                }
+              ]
+            },
+            {
+              "key": "repo.awfwcx.listDir",
+              "title": "资源文件"
+            }
+          ]
+        },
+        {
+          "key": "repo.jar",
+          "title": "JAR包管理",
+          "children": [
+            {
+              "key": "repo.jar.listJar",
+              "title": "jar注册"
+            },
+            {
+              "key": "repo.jar.listService",
+              "title": "服务注册"
+            },
+            {
+              "key": "repo.jar.deljar",
+              "title": "jar包注销"
+            },
+            {
+              "key": "repo.jar.newJarVersions",
+              "title": "检查更新"
+            },
+            {
+              "key": "repo.jar.listTags",
+              "title": "修改标签"
+            },
+            {
+              "key": "repo.jar.query",
+              "title": "查询"
+            },
+            {
+              "key": "repo.jar.listService",
+              "title": "GroupId/ArtifactId"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "test",
+      "title": "测试管理",
+      "children": [
+        {
+          "key": "test.gncs",
+          "title": "功能测试",
+          "children": [
+            {
+              "key": "test.gncs.ylgl",
+              "title": "测试用例",
+              "children": [
+                {
+                  "key": "test.gncs.ylgl.add",
+                  "title": "增加测试用例"
+                },
+                {
+                  "key": "test.gncs.ylgl.details",
+                  "title": "详情"
+                },
+                {
+                  "key": "test.gncs.ylgl.del",
+                  "title": "删除"
+                },
+                {
+                  "key": "test.gncs.ylgl.rwyy",
+                  "title": "任务引用"
+                },
+                {
+                  "key": "test.gncs.ylgl.query",
+                  "title": "查询"
+                }
+              ]
+            },
+            {
+              "key": "test.gncs.rwgl",
+              "title": "测试任务",
+              "children": [
+                {
+                  "key": "test.gncs.rwgl.add",
+                  "title": "增加测试任务"
+                },
+                {
+                  "key": "test.gncs.rwgl.details",
+                  "title": "详情"
+                },
+                {
+                  "key": "test.gncs.rwgl.del",
+                  "title": "删除"
+                },
+                {
+                  "key": "test.gncs.rwgl.start",
+                  "title": "启动"
+                },
+                {
+                  "key": "test.gncs.rwgl.result",
+                  "title": "结果"
+                },
+                {
+                  "key": "test.gncs.rwgl.query",
+                  "title": "查询"
+                }
+              ]
+            },
+            {
+              "key": "test.gncs.csjg",
+              "title": "测试结果",
+              "children": [
+                {
+                  "key": "test.gncs.csjg.del",
+                  "title": "删除"
+                },
+                {
+                  "key": "test.gncs.csjg.details",
+                  "title": "详情"
+                },
+                {
+                  "key": "test.gncs.csjg.query",
+                  "title": "查询"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "test.ylcs",
+          "title": "性能测试",
+          "children": [
+            {
+              "key": "test.ylcs.ylgl",
+              "title": "用例管理",
+              "children": [
+                {
+                  "key": "test.ylcs.ylgl.add",
+                  "title": "增加测试用例"
+                },
+                {
+                  "key": "test.ylcs.ylgl.details",
+                  "title": "详情"
+                },
+                {
+                  "key": "test.ylcs.ylgl.del",
+                  "title": "删除"
+                },
+                {
+                  "key": "test.ylcs.ylgl.rwyy",
+                  "title": "任务引用"
+                },
+                {
+                  "key": "test.ylcs.ylgl.query",
+                  "title": "查询"
+                }
+              ]
+            },
+            {
+              "key": "test.ylcs.rwgl",
+              "title": "任务管理",
+              "children": [
+                {
+                  "key": "test.ylcs.rwgl.add",
+                  "title": "增加测试任务"
+                },
+                {
+                  "key": "test.ylcs.rwgl.details",
+                  "title": "详情"
+                },
+                {
+                  "key": "test.ylcs.rwgl.del",
+                  "title": "删除"
+                },
+                {
+                  "key": "test.ylcs.rwgl.start",
+                  "title": "启动"
+                },
+                {
+                  "key": "test.ylcs.rwgl.result",
+                  "title": "结果"
+                },
+                {
+                  "key": "test.ylcs.rwgl.query",
+                  "title": "查询"
+                }
+              ]
+            },
+            {
+              "key": "test.ylcs.csjg",
+              "title": "测试结果",
+              "children": [
+                {
+                  "key": "test.ylcs.csjg.del",
+                  "title": "删除"
+                },
+                {
+                  "key": "test.ylcs.csjg.details",
+                  "title": "详情"
+                },
+                {
+                  "key": "test.ylcs.csjg.query",
+                  "title": "查询"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "log",
+      "title": "日志分析",
+      "children": [
+        {
+          "key": "log.fwfwrz",
+          "title": "服务访问日志"
+        },
+        {
+          "key": "log.fwyxrz",
+          "title": "服务运行日志"
+        },
+        {
+          "key": "log.rzglqsz",
+          "title": "日志过滤器设置",
+          "children": [
+            {"key": "log.rzglqsz.add",
+              "title": "设置日志过滤器"
+            },
+            {"key": "log.rzglqsz.detail",
+              "title": "详情"
+            },
+            {"key": "log.rzglqsz.log",
+              "title": "日志"
+            },
+            {"key": "log.rzglqsz.del",
+              "title": "删除"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gateways",
+      "title": "网关管理",
+      "children": [
+        {
+          "key": "gateways.amonitor",
+          "title": "网关运行监控",
+          "children": [
+            {
+              "key": "gateways.amonitor.del",
+              "title": "删除"
+            },
+            {
+              "key": "gateways.amonitor.query",
+              "title": "查询"
+            },
+            {
+              "key": "gateways.amonitor.request",
+              "title": "请求统计"
+            }
+          ]
+        },
+        {
+          "key": "gateways.bapps",
+          "title": "应用管理",
+          "children": [
+            {
+              "key": "gateways.bapps.add",
+              "title": "注册应用"
+            },
+            {
+              "key": "gateways.bapps.del",
+              "title": "删除"
+            },
+            {
+              "key": "gateways.bapps.details",
+              "title": "详情"
+            },
+            {
+              "key": "gateways.bapps.query",
+              "title": "查询"
+            }
+          ]
+        },
+        {
+          "key": "gateways.cracl",
+          "title": "远程主机管理",
+          "children": [
+            {
+              "key": "gateways.cracl.add",
+              "title": "增加远程主机"
+            },
+            {
+              "key": "gateways.cracl.del",
+              "title": "删除"
+            },
+            {
+              "key": "gateways.cracl.details",
+              "title": "详情"
+            },
+            {
+              "key": "gateways.cracl.query",
+              "title": "查询"
+            }
+          ]
+        },
+        {
+          "key": "gateways.dsacl",
+          "title": "接口访问管理",
+          "children": [
+            {
+              "key": "gateways.dsacl.add",
+              "title": "增加接口访问"
+            },
+            {
+              "key": "gateways.dsacl.del",
+              "title": "删除"
+            },
+            {
+              "key": "gateways.dsacl.details",
+              "title": "详情"
+            },
+            {
+              "key": "gateways.dsacl.query",
+              "title": "查询"
+            }
+          ]
+        },
+        {
+          "key": "gateways.erouter",
+          "title": "路由规则管理",
+          "children": [
+            {
+              "key": "gateways.erouter.add",
+              "title": "增加路由规则"
+            },
+            {
+              "key": "gateways.erouter.del",
+              "title": "删除"
+            },
+            {
+              "key": "gateways.erouter.details",
+              "title": "详情"
+            },
+            {
+              "key": "gateways.erouter.query",
+              "title": "查询"
+            }
+          ]
+        },
+        {
+          "key": "gateways.frate",
+          "title": "限流规则管理",
+          "children": [
+            {
+              "key": "gateways.frate.add",
+              "title": "增加限流规则"
+            },
+            {
+              "key": "gateways.frate.del",
+              "title": "删除"
+            },
+            {
+              "key": "gateways.frate.details",
+              "title": "详情"
+            },
+            {
+              "key": "gateways.frate.query",
+              "title": "查询"
+            }
+          ]
+        },
+        {
+          "key": "gateways.gflow",
+          "title": "请求转发规则管理",
+          "children": [
+            {
+              "key": "gateways.gflow.add",
+              "title": "增加转发规则"
+            },
+            {
+              "key": "gateways.gflow.del",
+              "title": "删除"
+            },
+            {
+              "key": "gateways.gflow.details",
+              "title": "详情"
+            },
+            {
+              "key": "gateways.gflow.query",
+              "title": "查询"
+            }
+          ]
+        },
+        {
+          "key": "gateways.hmock",
+          "title": "服务仿真数据管理",
+          "children": [
+            {
+              "key": "gateways.hmock.add",
+              "title": "增加仿真数据"
+            },
+            {
+              "key": "gateways.hmock.del",
+              "title": "删除"
+            },
+            {
+              "key": "gateways.hmock.details",
+              "title": "详情"
+            },
+            {
+              "key": "gateways.hmock.query",
+              "title": "查询"
+            }
+          ]
+        },
+        {
+          "key": "gateways.icache",
+          "title": "接口缓存规则管理",
+          "children": [
+            {
+              "key": "gateways.icache.add",
+              "title": "增加缓存规则"
+            },
+            {
+              "key": "gateways.icache.del",
+              "title": "删除"
+            },
+            {
+              "key": "gateways.icache.details",
+              "title": "详情"
+            },
+            {
+              "key": "gateways.icache.query",
+              "title": "查询"
+            }
+          ]
+        },
+        {
+          "key": "gateways.jlog",
+          "title": "服务访问日志管理",
+          "children": [
+            {
+              "key": "gateways.jlog.add",
+              "title": "增加日志规则"
+            },
+            {
+              "key": "gateways.jlog.del",
+              "title": "删除"
+            },
+            {
+              "key": "gateways.jlog.set",
+              "title": "修改"
+            },
+            {
+              "key": "gateways.jlog.details",
+              "title": "日志明细"
+            },
+            {
+              "key": "gateways.jlog.query",
+              "title": "查询"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "scheduler",
+      "title": "任务调度",
+      "children": [
+        {
+          "key": "scheduler.code",
+          "title": "代码片段",
+          "children": [
+            {
+              "key": "scheduler.code.add",
+              "title": "增加代码定义"
+            },
+            {
+              "key": "scheduler.code.detail",
+              "title": "详情"
+            },
+            {
+              "key": "scheduler.code.del",
+              "title": "删除"
+            },
+            {
+              "key": "scheduler.code.code",
+              "title": "代码"
+            },
+            {
+              "key": "scheduler.code.query",
+              "title": "查询"
+            }
+          ]
+        },
+        {
+          "key": "scheduler.task",
+          "title": "任务管理",
+          "children": [
+            {
+              "key": "scheduler.task.add",
+              "title": "增加任务"
+            },
+            {
+              "key": "scheduler.task.details",
+              "title": "详情"
+            },
+            {
+              "key": "scheduler.task.del",
+              "title": "删除"
+            },
+            {
+              "key": "scheduler.task.code",
+              "title": "代码"
+            },
+            {
+              "key": "scheduler.task.start",
+              "title": "运行"
+            },
+            {
+              "key": "scheduler.task.result",
+              "title": "结果"
+            },
+            {
+              "key": "scheduler.task.query",
+              "title": "查询"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "transaction",
+      "title": "事务监控",
+      "children": [
+        {
+          "key": "transaction.query",
+          "title": "查询"
+        },
+        {
+          "key": "transaction.submit",
+          "title": "提交"
+        },
+        {
+          "key": "transaction.del",
+          "title": "删除"
+        },
+        {
+          "key": "transaction.disquery",
+          "title": "分步事务-查询"
+        },
+        {
+          "key": "transaction.disreport",
+          "title": "分步事务-重试"
+        }
+      ]
+    },
+    {
+      "key": "script",
+      "title": "Web脚本",
+      "children": [
+        {
+          "key": "script.jbgl",
+          "title": "脚本管理",
+          "children": [
+            {
+              "key": "script.jbgl.query",
+              "title": "查询"
+            },
+            {
+              "key": "script.jbgl.add",
+              "title": "增加脚本"
+            },
+            {
+              "key": "script.jbgl.name",
+              "title": "脚本名称"
+            },
+            {
+              "key": "script.jbgl.code",
+              "title": "代码"
+            },
+            {
+              "key": "script.jbgl.check",
+              "title": "权限"
+            },
+            {
+              "key": "script.jbgl.del",
+              "title": "删除"
+            }
+          ]
+        },
+        {
+          "key": "script.kqxgl",
+          "title": "脚本权限",
+          "children": [
+            {
+              "key": "script.kqxgl.query",
+              "title": "查询"
+            },
+            {
+              "key": "script.kqxgl.add",
+              "title": "增加脚本调用权限"
+            },
+            {
+              "key": "script.kqxgl.zzbds",
+              "title": "正则表达式"
+            },
+            {
+              "key": "script.kqxgl.script",
+              "title": "脚本"
+            },
+            {
+              "key": "script.kqxgl.del",
+              "title": "删除"
+            }
+          ]
+        },{
+          "key": "script.lqxgl",
+          "title": " 服务转发权限",
+          "children": [
+            {
+              "key": "script.lqxgl.query",
+              "title": "查询"
+            },
+            {
+              "key": "script.lqxgl.add",
+              "title": "增加脚本调用权限"
+            },
+            {
+              "key": "script.lqxgl.update",
+              "title": "修改"
+            },
+            
+            {
+              "key": "script.lqxgl.del",
+              "title": "删除"
+            }
+          ]
+        },
+        {
+          "key": "script.mlgl",
+          "title": "目录管理",
+          "children": [
+            {
+              "key": "script.mlgl.query",
+              "title": "查询"
+            },
+            {
+              "key": "script.mlgl.add",
+              "title": "增加映射目录"
+            },
+            {
+              "key": "script.mlgl.mapping",
+              "title": "目录映射名称",
+              "children": [
+                {
+                  "key": "script.mlgl.mapping.add",
+                  "title": "增加子目录"
+                },
+                {
+                  "key": "script.mlgl.mapping.upload",
+                  "title": "上传文件"
+                },
+                {
+                  "key": "script.mlgl.mapping.name",
+                  "title": "文件名"
+                },
+                {
+                  "key": "script.mlgl.mapping.set",
+                  "title": "编辑"
+                },
+                {
+                  "key": "script.mlgl.mapping.download",
+                  "title": "下载"
+                },
+                {
+                  "key": "script.mlgl.mapping.del",
+                  "title": "删除"
+                }
+              ]
+            },
+            {
+              "key": "script.mlgl.set",
+              "title": "编辑"
+            },
+            {
+              "key": "script.mlgl.del",
+              "title": "删除"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "service",
+      "title": "服务流程编排",
+      "children": [
+        {
+          "key": "service.event",
+          "title": "事件定义",
+          "children": [
+            {
+              "key": "service.event.query",
+              "title": "查询"
+            },
+            {
+              "key": "service.event.add",
+              "title": "增加事件"
+            },
+            {
+              "key": "service.event.flag",
+              "title": "事件标识"
+            },
+            {
+              "key": "service.event.start",
+              "title": "发起事件"
+            },
+            {
+              "key": "service.event.pengding",
+              "title": "待处理事件"
+            },
+            {
+              "key": "service.event.del",
+              "title": "删除"
+            }
+          ]
+        },
+        {
+          "key": "service.flow",
+          "title": "流程定义",
+          "children": [
+            {
+              "key": "service.flow.query",
+              "title": "查询"
+            },
+            {
+              "key": "service.flow.add",
+              "title": "增加流程"
+            },
+            {
+              "key": "service.flow.edit",
+              "title": "流程标识"
+            },
+            {
+              "key": "service.flow.char",
+              "title": "流程图"
+            },
+            {
+              "key": "service.flow.process",
+              "title": "流程实例"
+            },
+            {
+              "key": "service.flow.del",
+              "title": "删除"
+            }
+          ]
+        },
+        {
+          "key": "service.process",
+          "title": "流程执行实例",
+          "children": [
+            {
+              "key": "service.process.query",
+              "title": "查询"
+            },
+            {
+              "key": "service.process.step",
+              "title": "执行步骤"
+            },
+            {
+              "key": "service.process.del",
+              "title": "删除"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "xtgl",
+      "title": "系统管理",
+      "children": [
+        {
+          "key": "xtgl.ayhgl",
+          "title": "用户管理",
+          "children": [
+            {
+              "key": "xtgl.ayhgl.add",
+              "title": "增加用户"
+            },
+            {
+              "key": "xtgl.ayhgl.status",
+              "title": "状态"
+            },
+            {
+              "key": "xtgl.ayhgl.details",
+              "title": "详情"
+            },
+            {
+              "key": "xtgl.ayhgl.del",
+              "title": "删除"
+            },
+            {
+              "key": "xtgl.ayhgl.report",
+              "title": "密码重置"
+            }
+          ]
+        },
+        {
+          "key": "xtgl.bjsgl",
+          "title": "角色管理",
+          "children": [
+            {
+              "key": "xtgl.bjsgl.add",
+              "title": "增加角色 "
+            },
+            {
+              "key": "xtgl.bjsgl.details",
+              "title": "详情 ",
+              "children": [
+                {
+                  "key": "xtgl.bjsgl.details.query",
+                  "title": "查询 "
+                },
+                {
+                  "key": "xtgl.bjsgl.details.set",
+                  "title": "修改 "
+                }
+              ]
+            },
+            {
+              "key": "xtgl.bjsgl.del",
+              "title": "删除 "
+            },
+            {
+              "key": "xtgl.bjsgl.member",
+              "title": "角色成员 ",
+              "children": [
+                {
+                  "key": "xtgl.bjsgl.member.query",
+                  "title": "查询 "
+                },
+                {
+                  "key": "xtgl.bjsgl.member.set",
+                  "title": "修改 "
+                }
+              ]
+            },
+            {
+              "key": "xtgl.bjsgl.addChild",
+              "title": "增加子角色 "
+            }
+          ]
+        },
+        {
+          "key": "xtgl.cqxgl",
+          "title": "授权管理",
+          "children": [
+            {
+              "key": "xtgl.cqxgl.user",
+              "title": "查看用户",
+              "children": [
+                {
+                  "key": "xtgl.cqxgl.user.query",
+                  "title": "查询"
+                },
+                {
+                  "key": "xtgl.cqxgl.user.set",
+                  "title": "修改"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "xtgl.dmmgz",
+          "title": "密码规则",
+          "children": [
+            {
+              "key": "xtgl.dmmgz.query",
+              "title": "查询"
+            },
+            {
+              "key": "xtgl.dmmgz.submit",
+              "title": "确定"
+            }
+          ]
+        },{
+		    "key": "xtgl.eauditlog",
+	        "title": "审计日志",
+          "children": [
+            {
+            "key": "xtgl.eauditlog.detail",
+            "title": "详情"
+            },{
+            "key": "xtgl.eauditlog.del",
+            "title": "删除"
+            },{
+            "key": "xtgl.eauditlog.query",
+            "title": "查询"
+            }
+          ]
+	      }
+      ]
+    }
+  ]
+}
